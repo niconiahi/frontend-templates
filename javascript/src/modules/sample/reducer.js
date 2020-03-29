@@ -1,7 +1,7 @@
 import { SampleActions } from './actions';
 
 const INITIAL_STATE = {
-  data: 'hello!',
+  data: '',
 };
 
 function sampleReducer(state = INITIAL_STATE, action) {

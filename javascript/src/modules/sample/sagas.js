@@ -4,11 +4,12 @@ import { takeEvery, put } from 'redux-saga/effects';
 import { SampleActions, sampleSuccess, sampleFailure } from './actions';
 
 // Workers
-function* sampleWorker(values) {
+function* sampleWorker({ payload }) {
   try {
-    const { payload } = values;
     const { data1, data2 } = payload;
 
+    // Do your stuff here with the paylaod data and then return a the Success Action
+    // You can see a full example in session module
     const response = { data1, data2 };
 
     yield put(sampleSuccess(response));
